@@ -26,4 +26,4 @@ I would like to hear your comments how to improve the app.
 
 Please send comments to FarWatchPost@gmail.com
 
-[![DepthSense](https://github.com/Berranzan/DepthSense/blob/main/docs/assets/DepthSense%20screenshot.png?raw=true)]([https://www.youtube.com/watch?v=StTqXEQ2l-Y](https://www.youtube.com/watch?v=hSlkyQm20xM) "DepthSense")
+[![DepthSense](https://github.com/Berranzan/DepthSense/blob/main/docs/assets/DepthSense%20screenshot.png?raw=true)](https://www.youtube.com/watch?v=hSlkyQm20xM) "DepthSense")

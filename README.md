@@ -28,4 +28,4 @@ Please send comments to FarWatchPost@gmail.com
 
 Click on the image bellow to view short description video:
 
-[![DepthSense](https://github.com/Berranzan/DepthSense/blob/main/docs/assets/DepthSense%20screenshot.png?raw=true)](https://www.youtube.com/watch?v=hSlkyQm20xM "DepthSense")
+[![DepthSense](https://github.com/Berranzan/DepthSense/blob/main/docs/assets/DepthSense%20screenshot%20small.png?raw=true)](https://www.youtube.com/watch?v=hSlkyQm20xM "DepthSense")

@@ -31,27 +31,48 @@ Click on the image bellow to view short description video:
 [![DepthSense](https://github.com/Berranzan/DepthSense/blob/main/docs/assets/DepthSense%20screenshot%20small.png?raw=true)](https://www.youtube.com/watch?v=hSlkyQm20xM "DepthSense")
 
 About code:
+
 When some time ago I learned that iPhones have LIDAR this kind of app was one of the first things that pop up in my mind. I was surprised that no one even tried to implement it, at least that I know of.
+
 Code is canibalized/frankensteinized from this article and provided code: https://developer.apple.com/documentation/arkit/environmental_analysis/displaying_a_point_cloud_using_scene_depth
+
 Function to get pixel color at the center of the screen is added in ARDataProvider class:
+ 
  func GetColor () -> CGFloat?{
+ 
         guard let _ = depthContent.texture else {return 0.0}
+        
         let x = depthContent.texture!.width/2
+        
         let y = depthContent.texture!.height/2
+        
         let pixels: UnsafeMutablePointer<Float32> = depthContent.texture!.getPixels(MTLRegionMake2D(x, y, 1, 1), mipmapLevel: 0)
-        defer {
+       
+       defer {
+          
           pixels.deallocate()
-        }
-        let red: CGFloat   = CGFloat(pixels[2])
+       
+       }
+       
+       let red: CGFloat   = CGFloat(pixels[2])
+        
         let green: CGFloat = CGFloat(pixels[1])
-        let blue: CGFloat  = CGFloat(pixels[0])
-        var alpha: CGFloat = CGFloat(pixels[3])
+       
+       let blue: CGFloat  = CGFloat(pixels[0])
+       
+       var alpha: CGFloat = CGFloat(pixels[3])
+        
         var white: CGFloat = 0
-        let color = UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: CGFloat(alpha))
-        color.getWhite(&white, alpha: &alpha)
+       
+       let color = UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: CGFloat(alpha))
+       
+       color.getWhite(&white, alpha: &alpha)
         
         return white
-    }
+   
+   }
+  
   ToneOutputUnit was taken from this article: https://stackoverflow.com/questions/55572894/produce-sounds-of-different-frequencies-in-swift
-  But upon some examination I have realized that it is part of this project: https://gist.github.com/hotpaw2/630a466cc830e3d129b9
-  Credit and thanks to https://gist.github.com/hotpaw2 for writing so usefull code.
+  but upon some examination I have realized that it is part of this project: https://gist.github.com/hotpaw2/630a466cc830e3d129b9
+ 
+ Credit and thanks to https://gist.github.com/hotpaw2 for writing so usefull code.

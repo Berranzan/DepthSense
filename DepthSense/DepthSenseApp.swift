@@ -11,7 +11,7 @@ import SwiftUI
 struct DepthSenseApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MetalDepthView()
         }
     }
 }

@@ -39,6 +39,7 @@ Code is canibalized/frankensteinized from this article and provided code: https:
 Function to get pixel color at the center of the screen is added in ARDataProvider class:
  
  func GetColor () -> CGFloat?{
+ 
         guard let _ = depthContent.texture else {return 0.0}
         
         let x = depthContent.texture!.width/2

@@ -38,39 +38,23 @@ Code is canibalized/frankensteinized from this article and provided code: https:
 
 Function to get pixel color at the center of the screen is added in ARDataProvider class:
  
- func GetColor () -> CGFloat?{
- 
-        guard let _ = depthContent.texture else {return 0.0}
-        
+    func GetColor () -> CGFloat?{
+        guard let _ = depthContent.texture else {return 0.0} 
         let x = depthContent.texture!.width/2
-        
         let y = depthContent.texture!.height/2
-        
         let pixels: UnsafeMutablePointer<Float32> = depthContent.texture!.getPixels(MTLRegionMake2D(x, y, 1, 1), mipmapLevel: 0)
-       
        defer {
-          
           pixels.deallocate()
-       
        }
-       
        let red: CGFloat   = CGFloat(pixels[2])
-        
-        let green: CGFloat = CGFloat(pixels[1])
-       
+       let green: CGFloat = CGFloat(pixels[1])
        let blue: CGFloat  = CGFloat(pixels[0])
-       
        var alpha: CGFloat = CGFloat(pixels[3])
-        
-        var white: CGFloat = 0
-       
+       var white: CGFloat = 0
        let color = UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: CGFloat(alpha))
-       
        color.getWhite(&white, alpha: &alpha)
-        
-        return white
-   
-   }
+       return white
+      }
 
 ToneOutputUnit was taken from this article: https://stackoverflow.com/questions/55572894/produce-sounds-of-different-frequencies-in-swift
    but upon some examination I have realized that it is part of this project: https://gist.github.com/hotpaw2/630a466cc830e3d129b9

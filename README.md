@@ -73,6 +73,6 @@ Function to get pixel color at the center of the screen is added in ARDataProvid
    }
   
   ToneOutputUnit was taken from this article: https://stackoverflow.com/questions/55572894/produce-sounds-of-different-frequencies-in-swift
-  but upon some examination I have realized that it is part of this project: https://gist.github.com/hotpaw2/630a466cc830e3d129b9
+   but upon some examination I have realized that it is part of this project: https://gist.github.com/hotpaw2/630a466cc830e3d129b9
  
  Credit and thanks to https://gist.github.com/hotpaw2 for writing so usefull code.
